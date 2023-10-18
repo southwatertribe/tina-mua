@@ -23,24 +23,30 @@ export default function Home() {
       </div>
 
       <div className={styles.column}>
-        <div className={`${styles.shape} ${styles.top} ${styles.shape1Top}`}></div>
-            <img src="https://images.squarespace-cdn.com/content/v1/62b6d246cfb17458bffaf5a6/b0767f3c-02ed-4f60-8598-be004744d61e/3d92cac23b89126bf986bcf3d36efff7.jpg" alt="Image 1" />
-        <div className={`${styles.shape} ${styles.bottom} ${styles.shape1Bottom}`}></div>
-        <span className={styles.centeredText}>BRIDAL</span>
+        <Link href="/portfolio/bridal">
+          <div className={`${styles.shape} ${styles.top} ${styles.shape1Top}`}></div>
+              <img src="https://images.squarespace-cdn.com/content/v1/62b6d246cfb17458bffaf5a6/b0767f3c-02ed-4f60-8598-be004744d61e/3d92cac23b89126bf986bcf3d36efff7.jpg" alt="Image 1" />
+          <div className={`${styles.shape} ${styles.bottom} ${styles.shape1Bottom}`}></div>
+          <span className={styles.centeredText}>BRIDAL</span>
+        </Link>
       </div>
 
       <div className={styles.column}>
-        <div className={`${styles.shape} ${styles.top} ${styles.shape2Top}`}></div>
-          <img src="https://i.pinimg.com/736x/53/fe/f5/53fef50937093e69ec0361cc4e589fcb.jpg" alt="Image 2" />
-        <div className={`${styles.shape} ${styles.bottom} ${styles.shape2Bottom}`}></div>
-        <span className={styles.centeredText}>SFX</span>
+        <Link href="/portfolio/sfx">
+          <div className={`${styles.shape} ${styles.top} ${styles.shape2Top}`}></div>
+            <img src="https://i.pinimg.com/736x/53/fe/f5/53fef50937093e69ec0361cc4e589fcb.jpg" alt="Image 2" />
+          <div className={`${styles.shape} ${styles.bottom} ${styles.shape2Bottom}`}></div>
+          <span className={styles.centeredText}>SFX</span>
+        </Link>
       </div>
 
       <div className={styles.column}>
-        <div className={`${styles.shape} ${styles.top} ${styles.shape3Top}`}></div>
-            <img src="https://media.fashionnetwork.com/m/1ac6/d40c/79a6/10a1/9294/83be/59fb/9bed/13ba/2ea3/2ea3.jpg" alt="Image 3" />
-        <div className={`${styles.shape} ${styles.bottom} ${styles.shape3Bottom}`}></div>
-        <span className={styles.centeredText}>RUNWAY</span>
+        <Link href="/portfolio/runway">
+          <div className={`${styles.shape} ${styles.top} ${styles.shape3Top}`}></div>
+              <img src="https://media.fashionnetwork.com/m/1ac6/d40c/79a6/10a1/9294/83be/59fb/9bed/13ba/2ea3/2ea3.jpg" alt="Image 3" />
+          <div className={`${styles.shape} ${styles.bottom} ${styles.shape3Bottom}`}></div>
+          <span className={styles.centeredText}>RUNWAY</span>
+        </Link>
       </div>
 
     </div>
