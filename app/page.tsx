@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles/Main.module.css';
+import Link from 'next/link';
 
 
 
@@ -13,10 +14,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.column}>
-        <div className={`${styles.shape} ${styles.top} ${styles.shape4Top}`}></div>
-          <img src="https://mail.google.com/mail/u/1?ui=2&ik=2b4ad438ad&attid=0.1.1&permmsgid=msg-f:1779713584652490115&th=18b2d0136f261583&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ95TRR4yQjqS1egeyn5_00hSnaFAdlXUDv6kkn_3iPiV9aw6pxS1STK-SKyRj2ycnj-vvutFGNwr9EhRvzuPi2M1qyVzwClwdLwfwXPWiQimvRpWSdAiYcTh_M&disp=emb" alt="Image 4" />
-        <div className={`${styles.shape} ${styles.bottom} ${styles.shape4Bottom}`}></div>
-        <span className={styles.centeredText}>ABOUT ME / BOOKING</span>
+        <Link href="/about">
+          <div className={`${styles.shape} ${styles.top} ${styles.shape4Top}`}></div>
+            <img src="https://mail.google.com/mail/u/1?ui=2&ik=2b4ad438ad&attid=0.1.1&permmsgid=msg-f:1779713584652490115&th=18b2d0136f261583&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ95TRR4yQjqS1egeyn5_00hSnaFAdlXUDv6kkn_3iPiV9aw6pxS1STK-SKyRj2ycnj-vvutFGNwr9EhRvzuPi2M1qyVzwClwdLwfwXPWiQimvRpWSdAiYcTh_M&disp=emb" alt="Image 4" />
+          <div className={`${styles.shape} ${styles.bottom} ${styles.shape4Bottom}`}></div>
+          <span className={styles.centeredText}>ABOUT ME / BOOKING</span>
+        </Link>
       </div>
 
       <div className={styles.column}>
