@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .column {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  .column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px) brightness(0.7);
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .shape {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: #333; /* Change to your desired color */
+    z-index: 1;
+  }
+  
+  .shape.top {
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .shape.bottom {
+    bottom: 0;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  }
+  
+  .shape1Top, .shape1Bottom {
+    background-color: #606c38; /* Example color for column 1 shapes */
+  }
+  
+  .shape2Top, .shape2Bottom {
+    background-color: #bc6c25; /* Example color for column 2 shapes */
+  }
+  
+  .shape3Top, .shape3Bottom {
+    background-color: #283618; /* Example color for column 3 shapes */
+  }
+  
+  .shape4Top, .shape4Bottom {
+    background-color: #fefae0; /* Example color for column 4 shapes */
+  }
+  
+  .column:hover img {
+    filter: blur(0) brightness(1);
+    transform: scale(1.1);
+  }
+  
+  .column:hover .shape.top {
+    transform: translateY(-80%);
+  }
+  
+  .column:hover .shape.bottom {
+    transform: translateY(80%);
+  }
+
+  .centeredText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; 
+    color: #ffffff; 
+    font-size: 2rem; 
+    text-align: center;
+    font-weight: bold; 
+    
+  }
+  
+  
+
+/* Responsive styles for mobile view */
+@media (max-width: 768px) { /* Adjust 768px to your desired breakpoint */
+  .container {
+    flex-direction: column; /* Stack columns on top of each other */
+  }
+
+  .column {
+    width: 100%; /* Take full width */
+    height: auto; /* Adjust height as needed or keep it auto */
+  }
+
+  /* Disable hover effects on mobile */
+  .column:hover .shape.top,
+  .column:hover .shape.bottom {
+    clip-path: initial;
+  }
+
+  .column img {
+    filter: none;
+  }
+
+  .column:hover img {
+    filter: initial;
+    transform: initial;
+  }
+
+  .shape {
+    /* ... existing styles ... */
+    width: 20%; /* Adjust this value based on how wide you want the shapes to be */
+    height: 100%; /* Make the shape span the full height of the column */
+    position: absolute;
+    top: 0; /* Align to the top of the column */
+  }
+  
+  .shape.left {
+    left: 0; /* Align to the left of the column */
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%); /* Adjust this to get the desired shape */
+  }
+  
+
+
+  
+  /* Animations */
+  @keyframes swipeEffect {
+    from {
+      left: 0;
+    }
+    to {
+      left: 80%; /* Adjust this value based on the final position of the shape */
+    }
+  }
+
+  .shape.left {
+    animation: swipeEffect 1s forwards; /* 1s is the duration, adjust as needed */
+  }
+  
+
+}

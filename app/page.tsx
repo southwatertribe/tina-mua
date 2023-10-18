@@ -1,113 +1,45 @@
-import Image from 'next/image'
+import React from 'react';
+import styles from './styles/Main.module.css';
+
+
 
 export default function Home() {
+  const handleRectangleClick = (rectangleNumber: number) => {
+    // Handle the click event for each rectangle
+    console.log(`Rectangle ${rectangleNumber} clicked!`);
+    // You can add more logic here, like navigation or other actions
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div className={styles.container}>
+      <div className={styles.column}>
+        <div className={`${styles.shape} ${styles.top} ${styles.shape1Top}`}></div>
+          <img src="https://mail.google.com/mail/u/1?ui=2&ik=2b4ad438ad&attid=0.1.1&permmsgid=msg-f:1779713584652490115&th=18b2d0136f261583&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ95TRR4yQjqS1egeyn5_00hSnaFAdlXUDv6kkn_3iPiV9aw6pxS1STK-SKyRj2ycnj-vvutFGNwr9EhRvzuPi2M1qyVzwClwdLwfwXPWiQimvRpWSdAiYcTh_M&disp=emb" alt="Image 4" />
+        <div className={`${styles.shape} ${styles.bottom} ${styles.shape1Bottom}`}></div>
+        <span className={styles.centeredText}>ABOUT ME / BOOKING</span>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.column}>
+        <div className={`${styles.shape} ${styles.top} ${styles.shape2Top}`}></div>
+          <img src="https://i.pinimg.com/736x/53/fe/f5/53fef50937093e69ec0361cc4e589fcb.jpg" alt="Image 2" />
+        <div className={`${styles.shape} ${styles.bottom} ${styles.shape2Bottom}`}></div>
+        <span className={styles.centeredText}>SFX</span>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.column}>
+        <div className={`${styles.shape} ${styles.top} ${styles.shape3Top}`}></div>
+          <img src="https://media.fashionnetwork.com/m/1ac6/d40c/79a6/10a1/9294/83be/59fb/9bed/13ba/2ea3/2ea3.jpg" alt="Image 3" />
+        <div className={`${styles.shape} ${styles.bottom} ${styles.shape3Bottom}`}></div>
+        <span className={styles.centeredText}>RUNWAY</span>
       </div>
-    </main>
-  )
+
+      <div className={styles.column}>
+        <div className={`${styles.shape} ${styles.top} ${styles.shape4Top}`}></div>
+          <img src="https://images.squarespace-cdn.com/content/v1/62b6d246cfb17458bffaf5a6/b0767f3c-02ed-4f60-8598-be004744d61e/3d92cac23b89126bf986bcf3d36efff7.jpg" alt="Image 1" />
+        <div className={`${styles.shape} ${styles.bottom} ${styles.shape4Bottom}`}></div>
+        <span className={styles.centeredText}>SFX</span>
+      </div>
+
+    </div>
+  );
 }
