@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.column}>
-        <div className={`${styles.shape} ${styles.top} ${styles.shape1Top}`}></div>
-          <img src="https://mail.google.com/mail/u/1?ui=2&ik=2b4ad438ad&attid=0.1.1&permmsgid=msg-f:1779713584652490115&th=18b2d0136f261583&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ95TRR4yQjqS1egeyn5_00hSnaFAdlXUDv6kkn_3iPiV9aw6pxS1STK-SKyRj2ycnj-vvutFGNwr9EhRvzuPi2M1qyVzwClwdLwfwXPWiQimvRpWSdAiYcTh_M&disp=emb" alt="Image 4" />
-        <div className={`${styles.shape} ${styles.bottom} ${styles.shape1Bottom}`}></div>
-        <span className={styles.centeredText}>ABOUT ME / BOOKING</span>
+      <div className={`${styles.shape} ${styles.top} ${styles.shape1Top}`}></div>
+          <img src="https://images.squarespace-cdn.com/content/v1/62b6d246cfb17458bffaf5a6/b0767f3c-02ed-4f60-8598-be004744d61e/3d92cac23b89126bf986bcf3d36efff7.jpg" alt="Image 1" />
+        <div className={`${styles.shape} ${styles.bottom} ${styles.shape4Bottom}`}></div>
+        <span className={styles.centeredText}>BRIDAL</span>
       </div>
 
       <div className={styles.column}>
@@ -35,9 +35,9 @@ export default function Home() {
 
       <div className={styles.column}>
         <div className={`${styles.shape} ${styles.top} ${styles.shape4Top}`}></div>
-          <img src="https://images.squarespace-cdn.com/content/v1/62b6d246cfb17458bffaf5a6/b0767f3c-02ed-4f60-8598-be004744d61e/3d92cac23b89126bf986bcf3d36efff7.jpg" alt="Image 1" />
-        <div className={`${styles.shape} ${styles.bottom} ${styles.shape4Bottom}`}></div>
-        <span className={styles.centeredText}>SFX</span>
+          <img src="https://mail.google.com/mail/u/1?ui=2&ik=2b4ad438ad&attid=0.1.1&permmsgid=msg-f:1779713584652490115&th=18b2d0136f261583&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ95TRR4yQjqS1egeyn5_00hSnaFAdlXUDv6kkn_3iPiV9aw6pxS1STK-SKyRj2ycnj-vvutFGNwr9EhRvzuPi2M1qyVzwClwdLwfwXPWiQimvRpWSdAiYcTh_M&disp=emb" alt="Image 4" />
+        <div className={`${styles.shape} ${styles.bottom} ${styles.shape1Bottom}`}></div>
+        <span className={styles.centeredText}>ABOUT ME / BOOKING</span>
       </div>
 
     </div>
