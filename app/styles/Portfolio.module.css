@@ -36,7 +36,13 @@
  .photoGrid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+}
+
+@media (max-width: 768px) {
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
 }
 
 .card {
