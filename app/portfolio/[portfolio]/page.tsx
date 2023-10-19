@@ -1,6 +1,11 @@
 import React from 'react'
+import styles from "../../styles/Portfolio.module.css"
 
-import styles from "../../styles/Portolfio.module.css"
+function getRandomClass() {
+    const classes = ['cardTall', 'cardWide', ''];
+    return classes[Math.floor(Math.random() * classes.length)];
+  }
+  
 
 type Params = {
     params: {
@@ -8,7 +13,14 @@ type Params = {
     }
 }
 
-const photos = [
+export interface Photo {
+    id: number;
+    imageURL: string;
+    description: string;
+  }
+  
+
+const photos: Photo[] = [
     {
       id: 1,
       imageURL: "https://loremflickr.com/300/200/bridal",
@@ -113,18 +125,15 @@ const photos = [
   
   
   
-  
 
 export default function PortfolioPage({params: {portfolio}}: Params) {
     return (
-        <div className={styles.gridContainer}>
+        <div className={styles.photoGrid}>
           {photos.map((photo) => (
-            <div key={photo.id} className={styles.card}>
+            <div key={photo.id} className={`${styles.card} ${styles[getRandomClass()]}`}>
               <img src={photo.imageURL} alt={photo.description} />
-              <p className={styles.cardDescription}>{photo.description}</p>
             </div>
           ))}
         </div>
-      );
-    
+      );    
 }
