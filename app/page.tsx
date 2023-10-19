@@ -12,7 +12,8 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
+    <div>
+          <div className={styles.container}>
       <div className={styles.column}>
         <Link href="/about">
           <div className={`${styles.shape} ${styles.top} ${styles.shape4Top}`}></div>
@@ -48,7 +49,18 @@ export default function Home() {
           <span className={styles.centeredText}>RUNWAY</span>
         </Link>
       </div>
-
+    </div>
+    <div>
+      <h1>I love tina</h1>
+      <h1>I love tina</h1>
+      <h1>I love tina</h1>
+      <h1>I love tina</h1>
+      <h1>I love tina</h1>
+      <h1>Hello Testing</h1>
+      <h1>Hello Testing</h1>
+      <h1>Hello Testing</h1>
+      <h1>Hello Testing</h1>
+    </div>
     </div>
   );
 }
